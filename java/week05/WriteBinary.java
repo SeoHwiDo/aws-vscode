@@ -1,20 +1,19 @@
 package week05;
 import java.util.*;
 public class WriteBinary {
-    private String bin;
-    public String writeBinary(int n) {
-        if (n == 0) {
-            return bin;
-        } else {
-            bin+=(char)(n%2);
-            n/=2;
-            return writeBinary(n);
+    private int bin=0;
+    public void writeBinary(int n) {
+        if(n==0){
+            System.out.printf("");
+        }else{
+            writeBinary(n/2);
+            System.out.printf("%d",n%2);
         }
     }
     public static void main(String args[]){
         Scanner scan= new Scanner(System.in);
         WriteBinary wr= new WriteBinary();
         int key=scan.nextInt();
-        System.out.println(wr.writeBinary(key));
+        wr.writeBinary(key);  
     }
 }
