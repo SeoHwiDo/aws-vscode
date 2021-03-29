@@ -1,10 +1,10 @@
 #include<stdio.h>
 int main(void){
-    printf("ì„œíœ˜ë„ 20205188\n");
+    printf("¼­ÈÖµµ 20205188\n");
     char x;
     int y=1;
     for(int i=0;i<2;i++){
-        printf("ìˆ«ìë¥¼ ì…ë ¥í•˜ì„¸ìš”:");
+        printf("¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä:");
         x=getchar();
         getchar();
         if(x>=48&&x<=58){
@@ -14,6 +14,6 @@ int main(void){
         }
         y*=x;
     }
-    printf("ë‘ìˆ˜ì˜ ê³±ì€ = %d\n",y);
+    printf("µÎ ¼öÀÇ °öÀº = %d",y);
     
 }

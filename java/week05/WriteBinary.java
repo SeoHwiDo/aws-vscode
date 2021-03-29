@@ -1,10 +1,8 @@
 package week05;
-
-import java.util.Scanner;
 import java.util.*;
 public class WriteBinary {
-    
-    public String inWriteBinary(int n) {
+    private String bin;
+    public String writeBinary(int n) {
         if (n == 0) {
             return bin;
         } else {
@@ -15,7 +13,8 @@ public class WriteBinary {
     }
     public static void main(String args[]){
         Scanner scan= new Scanner(System.in);
+        WriteBinary wr= new WriteBinary();
         int key=scan.nextInt();
-        System.out.println(writeBinary(key));
+        System.out.println(wr.writeBinary(key));
     }
 }
