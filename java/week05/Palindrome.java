@@ -22,7 +22,6 @@ public class Palindrome {
                 return determinePalindrome(s, i+1, j-1);
             }
         }
-               
     }
     public static void main(String args[]){
         Scanner scan= new Scanner(System.in);

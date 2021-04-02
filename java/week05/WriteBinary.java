@@ -3,9 +3,7 @@ import java.util.*;
 public class WriteBinary {
     private int bin=0;
     public void writeBinary(int n) {
-        if(n==0){
-            System.out.printf("");
-        }else{
+        if(n!=0){
             writeBinary(n/2);
             System.out.printf("%d",n%2);
         }
