@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <stdlib.h>
 void ex_01(){
     printf("정수를 입력하세요: ");
     int scan;
@@ -54,10 +54,14 @@ void ex_06(){
     printf("2진수로 만들때 1이 나타난 횟수:%d",count);
 }
 void ex_07(){
-    for(i=0;a>=i:i++){
-        
+    printf("서휘도 20205188\n");
+    int a=7;
+    for(int i=0,a=7;7>=i;i++,a--){
+        for(int k=0;k<a;k++) printf(" ");
+        for(int j=-i;j<=i;j++) printf("%d",abs(j));
+    printf("\n");
     }
 }
 int main(){
-    ex_05();
+    ex_07();
 }
