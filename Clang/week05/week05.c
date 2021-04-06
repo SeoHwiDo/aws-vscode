@@ -59,6 +59,7 @@ void ex_07(){
     for(int i=0,a=7;7>=i;i++,a--){
         for(int k=0;k<a;k++) printf(" ");
         for(int j=-i;j<=i;j++) printf("%d",abs(j));
+        //삼항연산자로 시도 하기
     printf("\n");
     }
 }
