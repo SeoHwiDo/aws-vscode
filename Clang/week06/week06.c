@@ -44,10 +44,20 @@ void week06_4(){
         fgets(str,30,stdin);
         if(str[0]=='\0') break;
         for(i=0;str[i];i++);
-        printf("문자열의 길이는=%d\n",i);
+        printf("문자열의 길이는=,%d,%d\n",i-1,i-1);
     }
-    
 }
+void week06_hw(){
+    char str[2][30];
+    int i,flag=0;
+    for(int i=0;i<2;i++){
+        printf("문자열 입력:");
+        fgets(str[i],30,stdin);
+    }
+    for(i=0;i<30;i++){
+        flag= str[0][i]!=str[1][i] ? 1:0;       
+    }flag ? printf("%s,%s,다름",str[0],str[1]):printf("%s,%s,같음",str[0],str[1]);
+} 
 int main(){
     week06_4();
     return 0;
