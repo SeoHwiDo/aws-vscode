@@ -2,7 +2,7 @@ package week05;
 import java.util.*;
 public class Binserch {
     public static int binserch_1(int a[], int n, int l, int r) {
-        if(l<r){
+        while(l<r){
             int mid=(l+r)/2;
             if(a[mid]==n){
                 return mid;
