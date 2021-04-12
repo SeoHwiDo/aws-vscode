@@ -7,7 +7,7 @@ public class Week06{
         }
     }
     public static int fBinserch(int a[],int key,int left,int right){
-        while(left>=right){
+        while(left<=right){
             int mid=(left+right)/2;
             if(key==a[mid]) {
                 return mid;
@@ -18,12 +18,12 @@ public class Week06{
                 left=mid-1;
                 
             }
-        }
+        }return -1;
         
     }
     public static void main(String[] args) {
         //System.out.println(fib(3));
         int a[]={10,12,13,14,15,20};  
-        System.out.println(fBinserch(a,13,a[0],a[a.length-1]));
+        System.out.println(fBinserch(a,13,a[0],a[5]));
     }
 }
