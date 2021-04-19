@@ -5,18 +5,18 @@ void week06_1(){
     int len=sizeof(num)/sizeof(int);
     float sum=0.0;
     for(int i=0;i<len;i++){
-        printf("?ˆ«?žë¥? ?ž…? ¥?•˜?„¸?š” :");
+        printf("?ï¿½ï¿½?ï¿½ï¿½ï¿½? ?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½ :");
         scanf("%d",num+i);
         sum+=num[i];    
     }
-    printf("?‰ê· ì?? = %f",sum/len);
+    printf("?ï¿½ï¿½ê· ï¿½?? = %f",sum/len);
 }
 void week06_2(){
     int j,num[]={5,7,22,53,88,71,101};
     int len=sizeof(num)/sizeof(int);
     printf("ë°°ì—´???  ");
     for(int i=0;i<len;i++) printf("%d  ",num[i]);
-    printf("\n?†Œ?ˆ˜?Š”  ");
+    printf("\n?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½  ");
     for(int i=0;i<len;i++){
         for(j=2;num[i]%j!=0;j++);
         if(j==num[i]) printf("%d  ",num[i]);
@@ -25,7 +25,7 @@ void week06_2(){
 void week06_3(){
     char ch;
     int count[10]={0};
-    printf("?ˆ«?žê°? ?•„?‹ˆë©? ë°˜ë³µ?´ ì¢…ë£Œ?©?‹ˆ?‹¤.\n0?—?„œ 9ê¹Œì???˜ ? •?ˆ˜ë¥? ?ž…? ¥?•˜?„¸?š”.");
+    printf("?ï¿½ï¿½?ï¿½ï¿½ï¿½? ?ï¿½ï¿½?ï¿½ï¿½ï¿½? ë°˜ë³µ?ï¿½ï¿½ ì¢…ë£Œ?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½.\n0?ï¿½ï¿½?ï¿½ï¿½ 9ê¹Œï¿½???ï¿½ï¿½ ?ï¿½ï¿½?ï¿½ï¿½ï¿½? ?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½.");
     do{
         //ch=getche();
         if(ch<='0'||ch>='9') break;
@@ -33,35 +33,35 @@ void week06_3(){
     
     }while(1);
     for(int i=0;i<10;i++){
-        if(count[i])printf("%d?Š” %d?šŒ ?ž…? ¥?•˜?…¨?Šµ?‹ˆ?‹¤.");
+        if(count[i])printf("%d?ï¿½ï¿½ %d?ï¿½ï¿½ ?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½.");
     }
 }
 void week06_4(){
     char str[30];
     int i;
     while(1){
-        printf("ë¬¸ìž?—´ ?ž…? ¥:");
+        printf("ë¬¸ìž?ï¿½ï¿½ ?ï¿½ï¿½?ï¿½ï¿½:");
         fgets(str,30,stdin);
         if(str[0]=='\0') break;
         for(i=0;str[i];i++);
-        printf("ë¬¸ìž?—´?˜ ê¸¸ì´?Š”=,%d,%d\n",i-1,i-1);
+        printf("ë¬¸ìž?ï¿½ï¿½?ï¿½ï¿½ ê¸¸ì´?ï¿½ï¿½=,%d,%d\n",i-1,i-1);
     }
 }
 void week06_hw(){
-    printf("¼­ÈÖµµ 20205188\n");
+    printf("ì„œíœ˜ë„ 20205188\n");
     char str[2][30];
     int i;
     for(int i=0;i<2;i++){
-        printf("¹®ÀÚ¿­ ÀÔ·Â:");
-        gets(str[i]);
+        printf("ë¬¸ìžì—´ ìž…ë ¥:");
+        fgets(str[i],30,stdin);
     }
-    for(i=0;i<30;i++){
+    for(i=0;;i++){
         int a=str[0][i],b=str[1][i];
         if(a!=b){
-             printf("%s,%s,´Ù¸§",str[0],str[1]);
+             printf("%s,%s,ë‹¤ë¦„",str[0],str[1]);
              break;            
         }else if(a==b&&a==0||b==0){
-            printf("%s,%s,°°À½",str[0],str[1]);
+            printf("%s,%s,ê°™ìŒ",str[0],str[1]);
             break;
         } 
                
