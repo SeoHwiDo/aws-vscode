@@ -39,8 +39,15 @@ public class Polynomial_2 {
         int thisIndex=0,pIndex=0;
         while(thisIndex<noOfTerms&&pIndex<p.noOfTerms){
             if(this.terms[thisIndex].getExp()==p.terms[pIndex].getExp()){
-                r.terms[thisIndex].setCoef(this);
+                r.terms[thisIndex].setCoef(this.terms[thisIndex].getCoef()+p.terms[pIndex].getCoef());
+            }else if(this.terms[thisIndex].getExp()<p.terms[pIndex].getExp()){
+                r.terms[thisIndex].setCoef(this.terms[thisIndex].getCoef());
+            }else if(this.terms[thisIndex].getExp()>p.terms[pIndex].getExp()){
+            r.terms[thisIndex].setCoef(p.terms[thisIndex].getCoef());
             }
+            thisIndex++;
+            pIndex++;
         }
+        return r;
     }
 }
