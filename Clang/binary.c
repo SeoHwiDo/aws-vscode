@@ -4,6 +4,6 @@ int main(){
     int bin;
     int hex;
     scanf("%d",&bin);
-    printf("2:%d",)
+    printf("2:%d",bin);
 
 }

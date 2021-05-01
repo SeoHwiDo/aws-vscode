@@ -1,3 +1,5 @@
+
+package week03;
 import java.util.*;
 public class find {
     public static void main(String args[]){

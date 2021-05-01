@@ -49,6 +49,18 @@ void ex_09(){
     printf("합:%d\n가장 큰 수:%d\n가장 작은 수:%d",sum,max,min);
     
 }
+void test(){
+    char a[2][10];
+    for(int i=0;i<2;i++){
+        fgets(a[i],10,stdin);
+    }
+    for(int i=0;i<2;i++){
+        for(int j=0;a[i][j]!='\0';j++){
+            printf("%d,%c\n",i,a[i][j]);
+        }
+    }
+    
+}
 int main(){
-    ex_09();
+    test();
 }

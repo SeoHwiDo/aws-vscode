@@ -7,13 +7,12 @@ public class Binserch {
             if(a[mid]==n){
                 return mid;
             }else if(a[mid]>n){
-                return binserch_1(a,n,l,mid-1);
+                return binserch_1(a,n,l,mid);
             }else if(a[mid]<n){
                 return binserch_1(a,n,mid+1,r);
             }
             else return -1;
-        }
-        else return -1;
+        }return -1;
     }
 
     public static void main(String args[]){
