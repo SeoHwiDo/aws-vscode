@@ -1,13 +1,13 @@
 package week05;
 
 public class Hanoi {
-    public static void move(int n,char orig,char temp,char dest){
+    public static void move(int n,char A,char B,char C){
         if(n==1){
-            System.out.println(n+":"+orig+"->"+dest);    
+            System.out.println(n+":"+A+"->"+C);    
         }else{
-            move(n-1,orig,dest,temp);
-            System.out.println(n+":"+orig+"->"+dest);
-            move(n-1,temp,orig,dest);
+            move(n-1,A,C,B);
+            System.out.println(n+":"+A+"->"+C);
+            move(n-1,B,A,C);
         }
     }
     public static void main(String args[]){
