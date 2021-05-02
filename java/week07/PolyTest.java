@@ -14,6 +14,7 @@ public class PolyTest {
         pol1.printPol1(pol1);
         pol1.printPol1(pol1.sMult(3, 2));
         pol1.printPol1(pol1.polyAdd(pol2));
+        System.out.println(pol_2_1.sMult(1, 2));
 
         
     }
