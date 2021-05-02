@@ -48,6 +48,22 @@ void ex_09(){
     printf("��??:%d\n媛��옣 �겙 �닔:%d\n媛��옣 �옉���? �닔:%d",sum,max,min);
     
 }
+<<<<<<< HEAD
+void test(){
+    char a[2][10];
+    for(int i=0;i<2;i++){
+        fgets(a[i],10,stdin);
+    }
+    for(int i=0;i<2;i++){
+        for(int j=0;a[i][j]!='\0';j++){
+            printf("%d,%c\n",i,a[i][j]);
+        }
+    }
+    
+}
+int main(){
+    test();
+=======
 
 void ex_10(){
     char a[10];
@@ -69,4 +85,5 @@ void ex_10(){
 }
 int main(){
     ex_10();
+>>>>>>> f6a59e58f1909fd82dad9a318cc94b991d82f56b
 }

@@ -1,3 +1,4 @@
+package week03;
 import java.util.*;
 public class Gugudan2{
     public static void main(String args[]){
