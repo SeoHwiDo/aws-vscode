@@ -17,7 +17,7 @@ void assign(){
     int i;
     pstr=str;
     printf("서휘도 20205188\n문자열 입력:");
-    gets(pstr);
+    fgets(pstr,30,stdin);
     for(i=0;*pstr;i++,pstr++);
     printf("입력된 문자열의 길이=%d",i);
 }
