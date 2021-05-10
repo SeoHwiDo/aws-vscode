@@ -1,16 +1,30 @@
+package week10;
 public class ListNode {
-    String data;
+    Object data;
     ListNode link;
     public ListNode() {
          data = null;
          link = null;
     }
-    public ListNode(String val) {
-         data = val;
+    public ListNode(Object n) {
+         data = n;
          link = null;
     }
-    public ListNode(String val, ListNode p) {
-         data = val;
-         link = p;
+    public ListNode(Object n, ListNode next) {
+         data = n;
+         link = next;
     }
-} // end ListNode class
+
+    public void putData(Object n){
+         data=n;
+    }
+    public Object getData(){
+         return data;
+    }
+    public void putLink(ListNode next){
+         link=next;
+    }
+    public ListNode getLink(){
+         return link;
+    }
+} 

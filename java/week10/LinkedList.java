@@ -1,18 +1,49 @@
-import java.util.LinkedList;
+package week10;
+
+import week10.ListNode;
 
 class LinkedList{
     private int length;
-    private ListNode first;
+    private ListNode firstNode;
+
+    public LinkedList(){
+        length=0;
+        firstNode=null;
+    }
+
+    public int size(){
+        return length;
+    }
+
+    public void addFirst(Object x){
+        ListNode newNode = new ListNode(x,firstNode);
+        firstNode=newNode;
+        length++;
+    }
+    public void insert(ListNode p,Object x){
+        ListNode newNode= new ListNode(x);
+        if (firstNode==null){
+            firstNode=newNode;
+            newNode.link=null;
+        }else if(p==null){
+            newNode.link=firstNode;
+            firstNode=newNode;
+        }else{
+            newNode.link=p.link;
+            p.link=newNode;
+        }
+    }
+    public
 
     public void delete(ListNode p){
-        if(first==null)return;
+        if(firstNode==null)return;
         if(p==null){
-            first=first.link;
+            firstNode=firstNode.link;
         }
         return;
     }
     public void reverse(){
-       ListNode p=first;
+       ListNode p=firstNode;
        ListNode q=null;
        ListNode r=null;
        while(p!=null){
