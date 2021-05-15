@@ -1,4 +1,5 @@
-package week10;
+
+
 public class ListNode {
     Object data;
     ListNode link;

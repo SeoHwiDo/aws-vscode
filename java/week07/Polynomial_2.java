@@ -1,4 +1,4 @@
-package week07;
+
 
 class Term{
     private int coef;

@@ -1,4 +1,3 @@
-package week07;
 
 public class PolyTest {
     public static void main(String args[]){

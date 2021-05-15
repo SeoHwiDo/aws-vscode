@@ -1,4 +1,4 @@
-package week07;
+
 
 public class Polynomial {
     private int coef[];

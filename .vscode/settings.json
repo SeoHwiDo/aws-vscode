@@ -5,4 +5,8 @@
         "**/.settings": true,
         "**/.factorypath": true
     },
+    "java.project.sourcePaths": [
+        "java/week10",
+        "java/week07"
+    ],
 }

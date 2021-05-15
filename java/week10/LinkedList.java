@@ -1,6 +1,4 @@
-package week10;
 
-import week10.ListNode;
 
 class LinkedList{
     private int length;
@@ -28,19 +26,33 @@ class LinkedList{
         }else if(p==null){
             newNode.link=firstNode;
             firstNode=newNode;
+            
         }else{
             newNode.link=p.link;
             p.link=newNode;
         }
+        length++;
     }
-    public
+    public void addLast(Object x){
+        ListNode newNode=new ListNode(x);
+        if(firstNode==null){
+            firstNode=newNode;
+        }
+        ListNode p = firstNode;
+        while(p.link!=null){
+            p=p.link; 
+        }
+        p.link=newNode;
+        length++;
+    }
 
     public void delete(ListNode p){
+        
         if(firstNode==null)return;
-        if(p==null){
-            firstNode=firstNode.link;
-        }
-        return;
+        else if(p==null)firstNode=firstNode.link;
+        else p.link=p.link.link;
+        length--;
+        
     }
     public void reverse(){
        ListNode p=firstNode;
@@ -52,37 +64,63 @@ class LinkedList{
            p=p.link;
            q.link=r;
        }
-       first=q;
+       firstNode=q;
     }
-    public static LinkedList connectList(LinkedList l1,LinkedList l2){
+    public static LinkedList concatList(LinkedList l1,LinkedList l2){
         LinkedList l= new LinkedList();
         l.length=l1.length+l2.length;
-        if(l1.first==null){
-            l.first=l2.first;
-        }else if(l2.first==null){
-            l.first=l1.first;
+        if(l1.firstNode==null){
+            l.firstNode=l2.firstNode;
+        }else if(l2.firstNode==null){
+            l.firstNode=l1.firstNode;
         }else{
-            ListNode p=l1.first;
-            while(p.link!=null)p=p.link;
-            p.link=l2.first;
+            ListNode p=l1.firstNode;
+            while(p.link!=null){
+                p=p.link; 
+            }
+        l.firstNode=l1.firstNode;
+        p.link=l2.firstNode;
+        
         }
         return l;
+        
     }
-    public ListNode intSerch(){}
-    public void deleteLast() {    // 프로그램 4.2
+    public ListNode listSerch(Object x){
+        ListNode p=firstNode;
+        while(p!=null){
+            if(p.data.equals(x))return p;
+            p=p.link;
+        }
+        return p;
+    }
+    public void deleteLastNode() {    
         ListNode previousNode, currentNode;
-        if (first == null) return;
-        if (first.link == null) {
-              first = null;
-              return;
+        if (firstNode == null) return;
+        if (firstNode.link == null) {
+            firstNode = null;
+            length--;
+            return;
         }else {
-            previousNode = first;
-            currentNode = first.link;
+            previousNode = firstNode;
+            currentNode = firstNode.link;
             while (currentNode.link != null) {
                 previousNode = currentNode;
                 currentNode = currentNode.link;
             }
             previousNode.link = null;
+            length--;
          }
      } 
+     public void print(){
+        ListNode p = firstNode; 
+        System.out.print("(");
+        while (p != null) {
+            System.out.print(p.data);
+            p = p.link;
+            if (p != null) {
+                 System.out.print(",");
+            }
+        }
+        System.out.print(")\n");   
+     }
 }
