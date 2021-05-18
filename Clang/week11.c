@@ -10,7 +10,7 @@ char mystrcat(char *stra,char *strb,char *plus){
         plus++;
         strb++;
     }
-    *plus='\0';
+        *plus='\0';
 }
 int main(int argc ,char *argv[]){
     char *stra=argv[1],*strb=argv[2],plus[50];

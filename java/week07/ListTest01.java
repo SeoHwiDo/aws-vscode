@@ -1,6 +1,4 @@
-package week07;
-
-public class ListTest {
+public class ListTest01{
     public static void main(String args[]){
         List list=new List();
         System.out.printf("Empty:%b\n",list.isEmpty());

@@ -1,4 +1,3 @@
-package week07;
 
 public class List {
     private char[] array;
