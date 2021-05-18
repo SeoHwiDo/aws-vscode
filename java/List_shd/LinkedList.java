@@ -1,4 +1,4 @@
-package java.List;
+package List_shd;
 
 class LinkedList{
     private int length;
@@ -47,12 +47,10 @@ class LinkedList{
     }
 
     public void delete(ListNode p){
-        
         if(firstNode==null)return;
         else if(p==null)firstNode=firstNode.link;
         else p.link=p.link.link;
         length--;
-        
     }
     public void reverse(){
        ListNode p=firstNode;

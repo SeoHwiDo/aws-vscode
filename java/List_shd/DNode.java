@@ -1,4 +1,4 @@
-package java.List;
+package List_shd;
 
 public class DNode {
     String data;
