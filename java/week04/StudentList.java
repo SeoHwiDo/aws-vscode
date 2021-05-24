@@ -35,7 +35,7 @@ public Student getById(int id){
             flag=false;
             return sts[i];
         }
-    }return -1;
+    }return sts[1];
     
 }
 }

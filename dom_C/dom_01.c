@@ -39,7 +39,28 @@ void ex_if(){
     if(num%2)printf("this number is odd"); 
     else printf("this number is even");
 }
-int main(void){
-    ex_if();
+void bubble_sort(int arr[],int count){
+    int temp;
+    for(int i=0;i<count;i++){
+        for(int j=0;j<count-1;j++){
+            if(arr[j]>arr[j+1]){
+                temp=arr[j];
+                arr[j]=arr[j+1];
+                arr[j+1]=temp;
+            }
+        }
+    for(int j=0;j<10;j++)printf("%d",arr[j]);
+    printf("\n");    
+    }
+}
+void ex_arr(){
+    int numArr[10]={8,4,2,5,3,7,10,1,6,9};
+    bubble_sort(numArr,sizeof(numArr)/sizeof(int));
+    for(int i=0;i<10;i++)printf("%d",numArr[i]);
+    printf("\n%d\n",sizeof(numArr));
+    printf("%d\n",sizeof(numArr)/sizeof(int));
+}
+int main(){
+    ex_arr();
     return 0;
 }

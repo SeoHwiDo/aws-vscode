@@ -1,7 +1,7 @@
 package List_shd;
 
 public class CircularTest {
-    public static void main(final String args[]) {
+    public static void main(String[] args) {
         CircularList c1 = new CircularList();
         c1.addFirst("test2");
         c1.print();

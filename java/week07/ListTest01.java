@@ -1,3 +1,4 @@
+package week07;
 public class ListTest01{
     public static void main(String args[]){
         List list=new List();
