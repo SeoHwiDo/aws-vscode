@@ -1,24 +1,27 @@
 package GenList;
 
 public class GenListTest {
-    public static void main(String[] args){
-        GenList p = new GenList();
-           p.insertData(82);
-           p.insertData("Korea");
-           GenList q = new GenList();
-           q.insertData(p);
-           q.insertData("Seoul");
-           GenList r = new GenList();
-           r.insertData("Busan");
-           GenList L = new GenList();
-           L.insertData(r);
-           L.insertData(q);
-           L.insertData("City");
-           L.printGL();
-           System.out.println();
-         // end main()
-      // 
+    public static void main(String[] args) {
+        GenList me = new GenList();
+        me.insertData(20205188);
+        me.insertData("서휘도");
+        me.printGL();
+        System.out.println();
+        GenList univ = new GenList();
+        univ.insertData(me);
+        univ.insertData("hallym");
+        univ.printGL();
+        System.out.println();
+        GenList city = new GenList();
+        city.insertData(univ);
+        city.insertData("ChunChun");
+        city.printGL();
+        System.out.println();
+        GenList copy_city = city.copy();
+        copy_city.printGL();
+        System.out.println();
+        System.out.println(copy_city.equal(city));
 
     }
-    
+
 }
