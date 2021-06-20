@@ -37,7 +37,7 @@ public class ListPolynomial {
         }
         if (e > firstNode.exp) {
             newNode.link = firstNode;
-            firstNode=newNode;
+            firstNode = newNode;
         } else {
             PolyNode p = firstNode;
             while (p.link != null) {
@@ -61,56 +61,13 @@ public class ListPolynomial {
             p = null;
         else {
             while (p.link.link != null) {
-                if(p.exp==e){
+                if (p.exp == e) {
                     p.link = p.link.link;
                     return;
                 }
                 p = p.link;
             }
         }
-    }
-
-    public ListPolynomial sMult(int c, int e) {
-        PolyNode p = firstNode;
-        ListPolynomial r = new ListPolynomial();
-        while (p != null) {
-            r.appendTerm(c*p.coef, e + p.exp);
-            p = p.link;
-        }
-        return r;
-    }
-
-    public ListPolynomial polyMult(ListPolynomial p) {
-       ListPolynomial r = new ListPolynomial();
-       ListPolynomial s, t;
-       PolyNode q = p.firstNode;
-       while(q!=null){
-           s=r;
-           
-           t=sMult(q.coef,q.exp);
-           
-           r = s.polyAdd(t);
-           
-           q=q.link;
-           
-       }
-       return r;
-    }
-
-    public void print() {
-        PolyNode p = firstNode; 
-        String str = "";
-        while (p != null) {
-            str += p.coef;
-            if (p.exp != 0) {
-                str+="X^"+p.exp;
-            }
-            if(p.link!=null){
-                str+=" + ";
-            }
-            p=p.link;
-        }
-         System.out.println(str);  
     }
 
     private void appendTerm(int c, int e) {
@@ -123,6 +80,52 @@ public class ListPolynomial {
             lastNode = newNode;
         }
     }
+
+
+    public ListPolynomial sMult(int c, int e) {
+        PolyNode p = firstNode;
+        ListPolynomial r = new ListPolynomial();
+        while (p != null) {
+            r.appendTerm(c * p.coef, e + p.exp);
+            p = p.link;
+        }
+        return r;
+    }
+
+    public ListPolynomial polyMult(ListPolynomial p) {
+        ListPolynomial r = new ListPolynomial();
+        ListPolynomial s, t;
+        PolyNode q = p.firstNode;
+        while (q != null) {
+            s = r;
+
+            t = sMult(q.coef, q.exp);
+
+            r = s.polyAdd(t);
+
+            q = q.link;
+
+        }
+        return r;
+    }
+
+    public void print() {
+        PolyNode p = firstNode;
+        String str = "";
+        while (p != null) {
+            str += p.coef;
+            if (p.exp != 0) {
+                str += "X^" + p.exp;
+            }
+            if (p.link != null) {
+                str += " + ";
+            }
+            p = p.link;
+        }
+        System.out.println(str);
+    }
+
+
 
     public ListPolynomial polyAdd(ListPolynomial poly) {
         ListPolynomial r = new ListPolynomial();

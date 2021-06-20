@@ -12,7 +12,7 @@ public class CircularTest {
         c1.addLast("test4");
         c1.print();
         System.out.print(c1.size()+"\n");
-        ListNode l1= c1.listSerch("test2");
+        ListNode l1= c1.listSerch("test11");
         c1.insert(l1, "test_mid");
         c1.print();
         System.out.print(c1.size()+"\n");

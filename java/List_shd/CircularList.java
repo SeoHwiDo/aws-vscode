@@ -25,6 +25,7 @@ class CircularList {
 		ListNode newNode= new ListNode(x);
         if (tail==null){
             newNode.link=newNode;
+			tail=newNode;
         }else if(p==null){
             newNode.link=tail.link;
             tail.link=newNode;
@@ -40,19 +41,19 @@ class CircularList {
             newNode.link=newNode;
 			tail=newNode;
         }else{
-			ListNode p= newNode;
-			p=tail.link;//맨앞
+			newNode.link=tail.link;//맨앞
         	tail.link=newNode;
 			tail=tail.link;
-			tail.link=p;
 		}
         length++;
 	}
 	public void delete(ListNode p) {
 		if(tail==null)return;
         else if(p==null)tail.link=tail.link.link;
-        else p.link=p.link.link;
-        length--;
+        else {
+			if(tail==p.link)tail=p.link.link;
+			p.link=p.link.link;
+        }length--;
 	}
 	public ListNode listSerch(Object x){
         ListNode p=tail;
@@ -60,7 +61,7 @@ class CircularList {
             if(p.data.equals(x))return p;
             p=p.link;
         }
-        return p;
+        return null;
     }
 	public void print() {
 		ListNode p=tail;

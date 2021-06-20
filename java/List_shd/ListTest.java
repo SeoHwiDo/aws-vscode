@@ -7,6 +7,7 @@ public class ListTest {
 
         L1.addFirst("node01");
         L1.addLast("node03");
+        //L1.addFirst("node00");
         ListNode node01 = L1.listSerch("node01");
         L1.insert(node01,"node02");
         L1.print();

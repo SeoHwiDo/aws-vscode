@@ -10,7 +10,7 @@ public class PolyNode {
         this.exp=0;
         this.link=null;
     }
-
+    
     public PolyNode(int coef, int exp) {
         this.coef=coef;
         this.exp=exp;

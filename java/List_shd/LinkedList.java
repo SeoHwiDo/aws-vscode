@@ -14,19 +14,20 @@ class LinkedList{
     }
 
     public void addFirst(Object x){
-        ListNode newNode = new ListNode(x,firstNode);
-        firstNode=newNode;
+        ListNode newNode = new ListNode(x);
+        if(firstNode==null)firstNode=newNode;
+        else{
+            newNode.link=firstNode;
+            firstNode=newNode;
+        }
         length++;
     }
     public void insert(ListNode p,Object x){
         ListNode newNode= new ListNode(x);
-        if (firstNode==null){
-            firstNode=newNode;
-            newNode.link=null;
-        }else if(p==null){
+        if (firstNode==null)firstNode=newNode;
+        else if(p==null){
             newNode.link=firstNode;
             firstNode=newNode;
-            
         }else{
             newNode.link=p.link;
             p.link=newNode;
@@ -35,14 +36,14 @@ class LinkedList{
     }
     public void addLast(Object x){
         ListNode newNode=new ListNode(x);
-        if(firstNode==null){
-            firstNode=newNode;
+        if(firstNode==null)firstNode=newNode;
+        else{
+            ListNode p = firstNode;
+            while(p.link!=null){
+                p=p.link; 
+            }
+            p.link=newNode;
         }
-        ListNode p = firstNode;
-        while(p.link!=null){
-            p=p.link; 
-        }
-        p.link=newNode;
         length++;
     }
 
@@ -54,8 +55,7 @@ class LinkedList{
     }
     public void reverse(){
        ListNode p=firstNode;
-       ListNode q=null;
-       ListNode r=null;
+       ListNode q=null,r=null;
        while(p!=null){
            r=q;
            q=p;
@@ -78,10 +78,8 @@ class LinkedList{
             }
         l.firstNode=l1.firstNode;
         p.link=l2.firstNode;
-        
         }
         return l;
-        
     }
     public ListNode listSerch(Object x){
         ListNode p=firstNode;
@@ -92,20 +90,20 @@ class LinkedList{
         return p;
     }
     public void deleteLastNode() {    
-        ListNode previousNode, currentNode;
+        ListNode p, r;
         if (firstNode == null) return;
         if (firstNode.link == null) {
             firstNode = null;
             length--;
             return;
         }else {
-            previousNode = firstNode;
-            currentNode = firstNode.link;
-            while (currentNode.link != null) {
-                previousNode = currentNode;
-                currentNode = currentNode.link;
+            p = firstNode;
+            r = firstNode.link;
+            while (r.link != null) {
+                p = r;
+                r = r.link;
             }
-            previousNode.link = null;
+            p.link = null;
             length--;
          }
      } 
